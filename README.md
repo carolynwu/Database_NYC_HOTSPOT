@@ -30,11 +30,18 @@ connection.end();
 ```
 reference from https://github.com/mysqljs/mysql
 
-## Node :heavy_plus_sign: Express
+## React :heavy_plus_sign: Express
 1. npm init
 2. npm install express --save
 3. npm install mysql --save
+4. npm install -g create-react-app
+5. npm start
 ## Create schema
+
+
+mock demo  for NYC hotspot visualization
+![1](https://user-images.githubusercontent.com/22507322/38677582-50460a36-3e24-11e8-89db-6ce09cff5185.jpg)
+
 
 Group member:
 
