@@ -39,8 +39,13 @@ reference from https://github.com/mysqljs/mysql
 ## Create schema
 
 
-mock demo  for NYC hotspot visualization
-![1](https://user-images.githubusercontent.com/22507322/38677582-50460a36-3e24-11e8-89db-6ce09cff5185.jpg)
+mock demo  for NYC hotspot visualization  
+
+using FusionTablesLayer
+
+Map with a SearchBox
+
+reference from https://github.com/tomchentw/react-google-maps
 
 
 Group member:
