@@ -35,7 +35,9 @@ reference from https://github.com/mysqljs/mysql
 2. npm install express --save
 3. npm install mysql --save
 4. npm install -g create-react-app
-5. npm start
+5. npm add express mysql cors 
+6. cd react-mysql
+7. npm start
 ## Create schema
 
 
