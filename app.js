@@ -1,4 +1,10 @@
+
+var express= require("express");
+const cors=require("cors");
+
 var mysql=require("mysql");
+var app= express();
+app.use(cors());
 
 var connection=mysql.createConnection({
     host:"localhost",
@@ -7,10 +13,29 @@ var connection=mysql.createConnection({
     database:"test"
 });
 
-var q="SELECT * FROM account";
-connection.query(q,function(error,results, fields){
-    if(error) throw error;
-    console.log(results);
+app.get("/",function(req,res) {
+    res.send("connected")
 });
 
-connection.end();
+app.get("/chart",function(req,res){
+
+     var t= "SELECT" +
+         "(SELECT COUNT(*) FROM account WHERE Borough_NAME='Brooklyn') AS brooklyn_wifi ,"+
+         "(SELECT COUNT(*) FROM account WHERE Borough_NAME='Queens' ) AS queens_wifi ,"+
+         "(SELECT COUNT(*) FROM account WHERE Borough_NAME='Manhattan') AS Manhattan_wifi";
+
+
+    connection.query(t,function(err, result){
+        if (err) throw err;
+        else{
+            return res.json({
+                data:result
+            })
+        }
+    });
+});
+
+
+app.listen(8080, function(){
+    console.log("Server running on 8080!");
+})
