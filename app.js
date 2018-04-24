@@ -17,15 +17,19 @@ app.get("/",function(req,res) {
     res.send("connected")
 });
 
-app.get("/chart",function(req,res){
+app.get("/chart",function(req,res) {
 
-     var t= "SELECT" +
-         "(SELECT COUNT(*) FROM account WHERE Borough_NAME='Brooklyn') AS brooklyn_wifi ,"+
-         "(SELECT COUNT(*) FROM account WHERE Borough_NAME='Queens' ) AS queens_wifi ,"+
-         "(SELECT COUNT(*) FROM account WHERE Borough_NAME='Manhattan') AS Manhattan_wifi";
-
-
-    connection.query(t,function(err, result){
+    /* var t= "SELECT" +
+         "(SELECT COUNT(*) FROM accounts WHERE Borough_NAME='Brooklyn') AS brooklyn_wifi ,"+
+         "(SELECT COUNT(*) FROM accounts WHERE Borough_NAME='Queens' ) AS queens_wifi,"+
+         "(SELECT COUNT(*) FROM accounts WHERE Borough_NAME='Manhattan') AS Manhattan_wifi";
+*/
+    res.json([
+        {id: 1, username: "a"},
+        {id: 2, username: "b"}
+    ]);
+});
+   /* connection.query(t,function(err, result){
         if (err) throw err;
         else{
             return res.json({
@@ -33,7 +37,8 @@ app.get("/chart",function(req,res){
             })
         }
     });
-});
+
+});*/
 
 
 app.listen(8080, function(){

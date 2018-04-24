@@ -1,21 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
 
-    state={
-        account:[]
+    state = {
+        accounts: []
     }
-    renderAccount=({ObjectID,Type}) => <div key={ObjectID}>{Type}</div>
-  render() {
-      const {account}=this.state;
-    return (
-      <div className="App">
-          {account.map(this.renderAccount)}
-      </div>
-    );
-  }
+
+    componentDidMount() {
+        fetch("http://localhost:8080/chart")
+            .then(response => response.json())
+            .then(accounts => this.setState({accounts}));
+    }
+
+    render() {
+        return (
+            <div>
+                {this.state.accounts.map(account=>
+                    <li key={account.id}> {account.username}</li>
+
+                    )}
+            </div>
+        );
+    }
 }
 
 export default App;
