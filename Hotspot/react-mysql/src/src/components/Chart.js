@@ -2,11 +2,28 @@ import React, { Component } from 'react';
 import {Bar, Line, Pie} from 'react-chartjs-2';
 
 class Chart extends Component{
-        constructor(){
+        constructor(props){
             super(props);
             this.state={
-                charData:{
-                    labels:
+                chartData:{
+                    labels:["Booklyn","Bronx", "Manhattan","Queens"],
+                    datasets:[
+                        {
+                            label:"poulation",
+                            data:[
+                                100,
+                                200,
+                                600,
+                                500
+                            ],
+                            backgroundColor:[
+                                'rgba(255,105,145,0.6)',
+                                'rgba(155,100,210,0.6)',
+                                'rgba(90,178,255,0.6)',
+                                'rgba(240,134,67,0.6)'
+                                ]
+                        }
+                    ]
                 }
             }
         }
@@ -15,7 +32,7 @@ class Chart extends Component{
         return(
             <div className="chart">
                 <Bar
-                    data={data}
+                    data={this.state.chartData}
                     width={100}
                     height={50}
                     opitions={{

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Chart from "./components/Chart";
 
+
 class App extends Component {
 
     state = {
@@ -22,6 +23,7 @@ class App extends Component {
                     <li key={account.brooklyn_wifi}> {account.brooklyn_wifi} {account.queens_wifi} {account.Manhattan_wifi}</li>
 
                     )}
+                    <Chart/>
             </div>
         );
     }
