@@ -10,14 +10,15 @@ class App extends Component {
     componentDidMount() {
         fetch("http://localhost:8080/chart")
             .then(response => response.json())
-            .then(accounts => this.setState({accounts}));
+            .then(response => this.setState({accounts:response.data}))
+            .catch(err=> console.error(err))
     }
 
     render() {
         return (
             <div>
                 {this.state.accounts.map(account=>
-                    <li key={account.id}> {account.username}</li>
+                    <li key={account.brooklyn_wifi}> {account.brooklyn_wifi} {account.queens_wifi} {account.Manhattan_wifi}</li>
 
                     )}
             </div>
