@@ -38,6 +38,7 @@ reference from https://github.com/mysqljs/mysql
 5. npm add express mysql cors 
 6. cd react-mysql
 7. npm start
+8. npm install react-chartjs-2 chart.js --save
 ## Create schema
 
 
