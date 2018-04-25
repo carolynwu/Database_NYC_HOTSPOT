@@ -51,13 +51,3 @@ Map with a SearchBox
 reference from https://github.com/tomchentw/react-google-maps
 
 
-Group member:
-
-Xujia Wu  [@carolynwu](https://github.com/carolynwu)
-
-Robin Ronson [@robrons96](https://github.com/robrons96)
-
-Eddie Garcia [@gar37012](https://github.com/gar37012)
-
-
-#Presentation Slide Link: https://docs.google.com/presentation/d/1mLiMs6jZFwZXFefgL2Vi-HRk8j8RLaBf_s2JMNLRiJA/edit?usp=sharing
