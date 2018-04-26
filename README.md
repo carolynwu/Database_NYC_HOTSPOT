@@ -35,13 +35,12 @@ reference from https://github.com/mysqljs/mysql
 3. npm install mysql --save
 4. npm install -g create-react-app
 5. npm add express mysql cors 
-6. cd react-mysql
-7. npm start
-8. npm install react-chartjs-2 chart.js --save
-## Create schema
+6. npm start
+
+## Create schema- using chartjs
+npm install react-chartjs-2 chart.js --save
 
 
-mock demo  for NYC hotspot visualization  
 
 using FusionTablesLayer
 
