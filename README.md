@@ -31,15 +31,15 @@ reference from https://github.com/mysqljs/mysql
 
 ## React :heavy_plus_sign: Express
 1. npm init
-2. npm install express --save
-3. npm install mysql --save
-4. npm install -g create-react-app
-5. npm add express mysql cors 
-6. npm start
+2. npm install -g create-react-app
+3. npm add express mysql cors 
+4. npm start
+
 
 ## Create schema- using chartjs
+```
 npm install react-chartjs-2 chart.js --save
-
+```
 
 
 using FusionTablesLayer
