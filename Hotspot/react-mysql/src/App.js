@@ -4,7 +4,7 @@ import Chart from "./components/Chart";
 
 
 class App extends Component {
-
+/* initialize the state to an empty array
     state = {
         accounts: []
     }
@@ -15,18 +15,25 @@ class App extends Component {
             .then(response => this.setState({accounts:response.data}))
             .catch(err=> console.error(err))
     }
+    */
 
     render() {
         return (
             <div>
-                {this.state.accounts.map(account=>
-                    <li key={account.brooklyn_wifi}> {account.brooklyn_wifi} {account.queens_wifi} {account.Manhattan_wifi}</li>
+                <h2> The Distribution of NYC Free WIFI Hotspot </h2>
+                <section>
+                    <Chart />
+                </section>
 
-                    )}
-                    <Chart/>
+
             </div>
         );
     }
 }
 
 export default App;
+
+//{this.state.accounts.map(account=>
+   // <li key={account.brooklyn_wifi}> {account.brooklyn_wifi} {account.queens_wifi} {account.Manhattan_wifi}</li>
+
+//)}
