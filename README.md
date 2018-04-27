@@ -62,7 +62,8 @@ reference from https://www.youtube.com/watch?v=8bNlffXEcC0
 ```
 npm install react-chartjs-2 chart.js --save
 ```
-:broken_heart:  I do not know how to save the data which got from express to pass to chartjs so the data which show in the graph which is not dynamic  :broken_heart:
+:broken_heart:  I do not know how to save the data which got from express to pass to the dataset in chartjs 
+so the data which showed in the graph which is not dynamic  :broken_heart:
 
 ## Deploy to Heroku
 ```
