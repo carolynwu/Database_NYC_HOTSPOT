@@ -1,5 +1,14 @@
 # Database-Project-WiFi-Hotspots
 
+Two opitions:
+
+1. charts using PHP and MySQL
+
+2. Charts using Node.js ExpressJS and Mondodb
+
+I chose Node.js, expressJs and Mysql which is really unwisdom :poop:
+
+
 ## Node :heavy_plus_sign: MySQL
 
 step 1. download Node and install the MySQL Node Package
@@ -28,6 +37,9 @@ connection.query("SELECT CURDATE()",function(error,results, fields){
 connection.end();
 ```
 reference from https://github.com/mysqljs/mysql
+
+I got the json format data from my localhost
+
 
 ## React :heavy_plus_sign: Express
 1. npm init
