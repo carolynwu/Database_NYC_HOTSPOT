@@ -10,7 +10,7 @@ You can find reference https://www.fusioncharts.com/dev/using-with-server-side-l
 
 I chose Node.js, expressJs and Mysql which is really dumb :poop:
 
-## running locally
+## Running locally
 
 ### Node :heavy_plus_sign: MySQL
 
