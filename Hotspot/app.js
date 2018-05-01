@@ -19,11 +19,14 @@ app.get("/",function(req,res) {
 
 app.get("/chart",function(req,res){
     // find count of  object ID in DB
-     var b= "SELECT COUNT(*) AS brooklyn_wifi FROM account WHERE Borough_NAME='Brooklyn'";
-     var q= "SELECT COUNT(*) AS queens_wifi FROM account WHERE Borough_NAME='Queens' ";
-     var m= "SELECT COUNT(*) AS Manhattan_wifi FROM account WHERE Borough_NAME='Manhattan' ";
+      var t= "SELECT" +
+        "(SELECT COUNT(*) FROM accounts WHERE Borough_NAME='Brooklyn') AS brooklyn_wifi ,"+
+         "(SELECT COUNT(*) FROM accounts WHERE Borough_NAME='Queens' ) AS queens_wifi ,"+
+         "(SELECT COUNT(*) FROM accounts WHERE Borough_NAME='Manhattan') AS Manhattan_wifi" +
+         "(SELECT COUNT(*) FROM accounts WHERE Borough_NAME='Bronx') AS bronx_wifi"+
+        "(SELECT COUNT(*) FROM accounts WHERE Borough_NAME='Staten Island') AS Staten_Island_wifi";
 
-    connection.query(b,function(err, result){
+    connection.query(t,function(err, result){
         if (err) throw err;
         else{
             return res.json({
